@@ -9,11 +9,11 @@ on:
   # 允许你从 Actions 标签页手动运行此工作流
   workflow_dispatch:
 
-# 设置 GITHUB_TOKEN 的权限，以便部署到 GitHub Pages
+# 权限设置（这里不需要 Pages 相关权限，因为我们用 PAT）
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  # pages: write  # 注释掉或删除
+  # id-token: write # 注释掉或删除
 
 # 只允许一个并发部署，新的部署会取消正在进行的部署
 concurrency:
@@ -23,7 +23,7 @@ concurrency:
 # 部署作业
 jobs:
   # 构建作业
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       # 步骤1：检出你的代码，包括 Git 子模块（我们的主题）
@@ -39,33 +39,28 @@ jobs:
           hugo-version: 'latest'
           extended: true # 必须是 extended 版本
 
-      # 步骤3：配置 GitHub Pages
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
-
-      # 步骤4：构建网站
-      # --minify 会压缩 HTML/CSS/JS 文件，减小体积
+      # 步骤3：构建网站
+      # 注意：baseURL 必须以 / 结尾，或者根据你的主题和链接结构精确设置
+      # 如果你的内容都在根路径下，通常设置为 /
+      # 如果你想部署到子目录（比如 /blog/），则设置为 /blog/
+      # 但你的目标是根域名，所以应该设置为 /
+      # 你原来的设置可能因为多了空格或者结构问题导致未正确应用
       - name: Build with Hugo
-        run: hugo --minify --baseURL "https://gnailcn.github.io/"
+        run: |
+          hugo --minify --baseURL "https://gnailcn.github.io/" # 确保 URL 正确无误
 
-      # 步骤5：上传构建产物 (public 文件夹)
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
-
-  # 部署作业
-  deploy:
-    runs-on: ubuntu-latest
-    # 需要 build 作业成功完成
-    needs: build
-    # 设置部署环境
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    # 部署步骤
-    steps:
+      # 步骤4：部署到 gnailcn.github.io 仓库
+      # 使用 peaceiris/actions-gh-pages Action
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # 使用你在 Secrets 中设置的 PAT
+          personal_token: ${{ secrets.DEPLOY_PAT }}
+          # 指定要部署到的外部仓库
+          external_repository: gnailcn/gnailcn.github.io
+          # 指定要推送到外部仓库的哪个分支
+          publish_branch: main # 或者 master, 取决于你 gnailcn.github.io 仓库的默认分支
+          # 指定要部署的本地文件夹（Hugo 构建输出目录）
+          publish_dir: ./public
+          # 可选：提交信息
+          commit_message: ${{ github.event.head_commit.message }}
