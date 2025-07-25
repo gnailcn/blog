@@ -47,7 +47,7 @@ jobs:
       # 步骤4：构建网站
       # --minify 会压缩 HTML/CSS/JS 文件，减小体积
       - name: Build with Hugo
-        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --minify --baseURL "https://gnailcn.github.io/"
 
       # 步骤5：上传构建产物 (public 文件夹)
       - name: Upload artifact
