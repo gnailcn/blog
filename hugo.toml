@@ -42,27 +42,27 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
     [[languages.en.menu.main]]
       identifier = "home"
       name = "Home"
-      url = "/"
+      url = "/en/"
       weight = 10
     [[languages.en.menu.main]]
       identifier = "archives"
       name = "Archives"
-      url = "/archives/"
+      url = "/en/archives/"
       weight = 20
     [[languages.en.menu.main]]
       identifier = "categories"
       name = "Categories"
-      url = "/categories/"
+      url = "/en/categories/"
       weight = 30
     [[languages.en.menu.main]]
       identifier = "tags"
       name = "Tags"
-      url = "/tags/"
+      url = "/en/tags/"
       weight = 40
     [[languages.en.menu.main]]
       identifier = "about"
       name = "About"
-      url = "/about/"
+      url = "/en/about/"
       weight = 50
 
   # 2. 简体中文 (Simplified Chinese)
@@ -76,27 +76,27 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
     [[languages.zh-cn.menu.main]]
       identifier = "home"
       name = "主页"
-      url = "/"
+      url = "/zh-cn/"
       weight = 10
     [[languages.zh-cn.menu.main]]
       identifier = "archives"
       name = "归档"
-      url = "/archives/"
+      url = "/zh-cn/archives/"
       weight = 20
     [[languages.zh-cn.menu.main]]
       identifier = "categories"
       name = "分类"
-      url = "/categories/"
+      url = "/zh-cn/categories/"
       weight = 30
     [[languages.zh-cn.menu.main]]
       identifier = "tags"
       name = "标签"
-      url = "/tags/"
+      url = "/zh-cn/tags/"
       weight = 40
     [[languages.zh-cn.menu.main]]
       identifier = "about"
       name = "关于"
-      url = "/about/"
+      url = "/zh-cn/about/"
       weight = 50
 
   # 3. 西班牙语 (Spanish)
@@ -109,23 +109,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "Entre el flujo y reflujo, recojo conchas y estrellas."
     [[languages.es.menu.main]]
       name = "Inicio"
-      url = "/"
+      url = "/es/"
       weight = 10
     [[languages.es.menu.main]]
       name = "Archivos"
-      url = "/archives/"
+      url = "/es/archives/"
       weight = 20
     [[languages.es.menu.main]]
       name = "Categorías"
-      url = "/categories/"
+      url = "/es/categories/"
       weight = 30
     [[languages.es.menu.main]]
       name = "Etiquetas"
-      url = "/tags/"
+      url = "/es/tags/"
       weight = 40
     [[languages.es.menu.main]]
       name = "Sobre mí"
-      url = "/about/"
+      url = "/es/about/"
       weight = 50
 
   # 4. 葡萄牙语 (Portuguese)
@@ -138,23 +138,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "Na maré que vai e vem, recolho conchas e estrelas."
     [[languages.pt.menu.main]]
       name = "Início"
-      url = "/"
+      url = "/pt/"
       weight = 10
     [[languages.pt.menu.main]]
       name = "Arquivos"
-      url = "/archives/"
+      url = "/pt/archives/"
       weight = 20
     [[languages.pt.menu.main]]
       name = "Categorias"
-      url = "/categories/"
+      url = "/pt/categories/"
       weight = 30
     [[languages.pt.menu.main]]
       name = "Tags"
-      url = "/tags/"
+      url = "/pt/tags/"
       weight = 40
     [[languages.pt.menu.main]]
       name = "Sobre"
-      url = "/about/"
+      url = "/pt/about/"
       weight = 50
 
   # 5. 阿拉伯语 (Arabic)
@@ -168,23 +168,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "بين المد والجزر، أجمع الأصداف والنجوم."
     [[languages.ar.menu.main]]
       name = "الصفحة الرئيسية"
-      url = "/"
+      url = "/ar/"
       weight = 10
     [[languages.ar.menu.main]]
       name = "الأرشيف"
-      url = "/archives/"
+      url = "/ar/archives/"
       weight = 20
     [[languages.ar.menu.main]]
       name = "الفئات"
-      url = "/categories/"
+      url = "/ar/categories/"
       weight = 30
     [[languages.ar.menu.main]]
       name = "العلامات"
-      url = "/tags/"
+      url = "/ar/tags/"
       weight = 40
     [[languages.ar.menu.main]]
       name = "حول"
-      url = "/about/"
+      url = "/ar/about/"
       weight = 50
 
   # 6. 法语 (French)
@@ -197,23 +197,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "Au gré des marées, je ramasse coquillages et étoiles."
     [[languages.fr.menu.main]]
       name = "Accueil"
-      url = "/"
+      url = "/fr/"
       weight = 10
     [[languages.fr.menu.main]]
       name = "Archives"
-      url = "/archives/"
+      url = "/fr/archives/"
       weight = 20
     [[languages.fr.menu.main]]
       name = "Catégories"
-      url = "/categories/"
+      url = "/fr/categories/"
       weight = 30
     [[languages.fr.menu.main]]
       name = "Mots-clés"
-      url = "/tags/"
+      url = "/fr/tags/"
       weight = 40
     [[languages.fr.menu.main]]
       name = "À propos"
-      url = "/about/"
+      url = "/fr/about/"
       weight = 50
       
   # 7. 俄语 (Russian)
@@ -226,23 +226,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "Среди приливов и отливов я собираю ракушки и звёзды."
     [[languages.ru.menu.main]]
       name = "Главная"
-      url = "/"
+      url = "/ru/"
       weight = 10
     [[languages.ru.menu.main]]
       name = "Архивы"
-      url = "/archives/"
+      url = "/ru/archives/"
       weight = 20
     [[languages.ru.menu.main]]
       name = "Категории"
-      url = "/categories/"
+      url = "/ru/categories/"
       weight = 30
     [[languages.ru.menu.main]]
       name = "Теги"
-      url = "/tags/"
+      url = "/ru/tags/"
       weight = 40
     [[languages.ru.menu.main]]
       name = "Обо мне"
-      url = "/about/"
+      url = "/ru/about/"
       weight = 50
 
   # 8. 德语 (German)
@@ -255,23 +255,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "In Ebbe und Flut sammle ich Muscheln und Sterne."
     [[languages.de.menu.main]]
       name = "Startseite"
-      url = "/"
+      url = "/de/"
       weight = 10
     [[languages.de.menu.main]]
       name = "Archiv"
-      url = "/archives/"
+      url = "/de/archives/"
       weight = 20
     [[languages.de.menu.main]]
       name = "Kategorien"
-      url = "/categories/"
+      url = "/de/categories/"
       weight = 30
     [[languages.de.menu.main]]
       name = "Tags"
-      url = "/tags/"
+      url = "/de/tags/"
       weight = 40
     [[languages.de.menu.main]]
       name = "Über mich"
-      url = "/about/"
+      url = "/de/about/"
       weight = 50
       
   # 9. 意大利语 (Italian)
@@ -284,23 +284,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "Tra il flusso e il riflusso, raccolgo conchiglie e stelle."
     [[languages.it.menu.main]]
       name = "Home"
-      url = "/"
+      url = "/it/"
       weight = 10
     [[languages.it.menu.main]]
       name = "Archivio"
-      url = "/archives/"
+      url = "/it/archives/"
       weight = 20
     [[languages.it.menu.main]]
       name = "Categorie"
-      url = "/categories/"
+      url = "/it/categories/"
       weight = 30
     [[languages.it.menu.main]]
       name = "Tag"
-      url = "/tags/"
+      url = "/it/tags/"
       weight = 40
     [[languages.it.menu.main]]
       name = "Chi sono"
-      url = "/about/"
+      url = "/it/about/"
       weight = 50
 
   # 10. 印尼语 (Indonesian)
@@ -313,23 +313,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "Di antara pasang surut, kukumpulkan kerang dan bintang."
     [[languages.id.menu.main]]
       name = "Beranda"
-      url = "/"
+      url = "/id/"
       weight = 10
     [[languages.id.menu.main]]
       name = "Arsip"
-      url = "/archives/"
+      url = "/id/archives/"
       weight = 20
     [[languages.id.menu.main]]
       name = "Kategori"
-      url = "/categories/"
+      url = "/id/categories/"
       weight = 30
     [[languages.id.menu.main]]
       name = "Tag"
-      url = "/tags/"
+      url = "/id/tags/"
       weight = 40
     [[languages.id.menu.main]]
       name = "Tentang"
-      url = "/about/"
+      url = "/id/about/"
       weight = 50
 
   # 11. 越南语 (Vietnamese)
@@ -342,23 +342,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "Giữa thủy triều lên xuống, tôi nhặt vỏ sò và những vì sao."
     [[languages.vi.menu.main]]
       name = "Trang chủ"
-      url = "/"
+      url = "/vi/"
       weight = 10
     [[languages.vi.menu.main]]
       name = "Lưu trữ"
-      url = "/archives/"
+      url = "/vi/archives/"
       weight = 20
     [[languages.vi.menu.main]]
       name = "Chuyên mục"
-      url = "/categories/"
+      url = "/vi/categories/"
       weight = 30
     [[languages.vi.menu.main]]
       name = "Thẻ"
-      url = "/tags/"
+      url = "/vi/tags/"
       weight = 40
     [[languages.vi.menu.main]]
       name = "Giới thiệu"
-      url = "/about/"
+      url = "/vi/about/"
       weight = 50
       
   # 12. 日语 (Japanese)
@@ -371,23 +371,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "潮の満ち引きの中、貝殻と星を拾う。"
     [[languages.ja.menu.main]]
       name = "ホーム"
-      url = "/"
+      url = "/ja/"
       weight = 10
     [[languages.ja.menu.main]]
       name = "アーカイブ"
-      url = "/archives/"
+      url = "/ja/archives/"
       weight = 20
     [[languages.ja.menu.main]]
       name = "カテゴリー"
-      url = "/categories/"
+      url = "/ja/categories/"
       weight = 30
     [[languages.ja.menu.main]]
       name = "タグ"
-      url = "/tags/"
+      url = "/ja/tags/"
       weight = 40
     [[languages.ja.menu.main]]
       name = "概要"
-      url = "/about/"
+      url = "/ja/about/"
       weight = 50
 
   # 13. 韩语 (Korean)
@@ -400,23 +400,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
         subtitle = "밀물과 썰물 사이에서, 조개와 별을 줍습니다."
     [[languages.ko.menu.main]]
       name = "홈"
-      url = "/"
+      url = "/ko/"
       weight = 10
     [[languages.ko.menu.main]]
       name = "아카이브"
-      url = "/archives/"
+      url = "/ko/archives/"
       weight = 20
     [[languages.ko.menu.main]]
       name = "카테고리"
-      url = "/categories/"
+      url = "/ko/categories/"
       weight = 30
     [[languages.ko.menu.main]]
       name = "태그"
-      url = "/tags/"
+      url = "/ko/tags/"
       weight = 40
     [[languages.ko.menu.main]]
       name = "소개"
-      url = "/about/"
+      url = "/ko/about/"
       weight = 50
 
   # 14. 印地语
@@ -428,23 +428,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
       subtitle = "उतार-चढ़ाव के बीच, मैं सीपियाँ और तारे बटोरता हूँ।"
     [[languages.hi.menu.main]]
       name = "घर"
-      url = "/"
+      url = "/hi/"
       weight = 10
     [[languages.hi.menu.main]]
       name = "पुरालेख"
-      url = "/archives/"
+      url = "/hi/archives/"
       weight = 20
     [[languages.hi.menu.main]]
       name = "श्रेणियाँ"
-      url = "/categories/"
+      url = "/hi/categories/"
       weight = 30
     [[languages.hi.menu.main]]
       name = "टैग"
-      url = "/tags/"
+      url = "/hi/tags/"
       weight = 40
     [[languages.hi.menu.main]]
       name = "परिचय"
-      url = "/about/"
+      url = "/hi/about/"
       weight = 50
 
 # 15. 乌尔都语 (RTL)
@@ -457,23 +457,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
       subtitle = "لہروں کے اتار چڑھاؤ کے بیچ، میں سیپیاں اور ستارے چنتا ہوں۔"
     [[languages.ur.menu.main]]
       name = "سرورق"
-      url = "/"
+      url = "/ur/"
       weight = 10
     [[languages.ur.menu.main]]
       name = "آرکائیو"
-      url = "/archives/"
+      url = "/ur/archives/"
       weight = 20
     [[languages.ur.menu.main]]
       name = "زمرہ جات"
-      url = "/categories/"
+      url = "/ur/categories/"
       weight = 30
     [[languages.ur.menu.main]]
       name = "ٹیگز"
-      url = "/tags/"
+      url = "/ur/tags/"
       weight = 40
     [[languages.ur.menu.main]]
       name = "تعارف"
-      url = "/about/"
+      url = "/ur/about/"
       weight = 50
 
 # 16. 孟加拉语
@@ -485,23 +485,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
       subtitle = "প্রবাহের উত্থান-পতনের মাঝে, আমি ঝিনুক ও তারা সংগ্রহ করি।"
     [[languages.bn.menu.main]]
       name = "হোম"
-      url = "/"
+      url = "/bn/"
       weight = 10
     [[languages.bn.menu.main]]
       name = "আর্কাইভ"
-      url = "/archives/"
+      url = "/bn/archives/"
       weight = 20
     [[languages.bn.menu.main]]
       name = "বিভাগ"
-      url = "/categories/"
+      url = "/bn/categories/"
       weight = 30
     [[languages.bn.menu.main]]
       name = "ট্যাগ"
-      url = "/tags/"
+      url = "/bn/tags/"
       weight = 40
     [[languages.bn.menu.main]]
       name = "পরিচিতি"
-      url = "/about/"
+      url = "/bn/about/"
       weight = 50
 
 # 17. 泰语
@@ -513,23 +513,23 @@ defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
       subtitle = "ท่ามกลางกระแสคลื่นที่ผันผวน ฉันเก็บเปลือกหอยและดวงดาว"
     [[languages.th.menu.main]]
       name = "หน้าแรก"
-      url = "/"
+      url = "/th/"
       weight = 10
     [[languages.th.menu.main]]
       name = "คลังบทความ"
-      url = "/archives/"
+      url = "/th/archives/"
       weight = 20
     [[languages.th.menu.main]]
       name = "หมวดหมู่"
-      url = "/categories/"
+      url = "/th/categories/"
       weight = 30
     [[languages.th.menu.main]]
       name = "แท็ก"
-      url = "/tags/"
+      url = "/th/tags/"
       weight = 40
     [[languages.th.menu.main]]
       name = "เกี่ยวกับ"
-      url = "/about/"
+      url = "/th/about/"
       weight = 50
       
 
