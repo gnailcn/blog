@@ -1,0 +1,588 @@
+# =================================================================
+#
+# Wandering TideCatcher - 全球多语言 HUGO 配置文件
+#
+# =================================================================
+
+# --- 全局核心设置 ---
+baseURL = "https://gnailcn.github.io/"
+theme = "stack"
+defaultContentLanguage = "en" # 网站默认语言是英语
+
+# --- 分页配置 ---
+[pagination]
+  pagerSize = 5
+
+# --- 永久链接配置 ---
+# 定义不同内容区域的 URL 格式
+[permalinks]
+  posts = "/posts/:year/:month/:slug/"
+  notes = "/notes/:year/:month/:slug/"
+
+
+# ===================================================
+# 输出格式配置 (激活主题高级功能的关键)
+# ===================================================
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+
+# --- 多语言配置 (Internationalization) ---
+[languages]
+
+  # 1. 英语 (English)
+  [languages.en]
+    languageName = "English"
+    weight = 10
+    title = "Wandering TideCatcher"
+    [languages.en.params]
+      [languages.en.params.sidebar]
+        subtitle = "Amidst the ebb and flow, I gather shells and stars."
+    [[languages.en.menu.main]]
+      identifier = "home"
+      name = "Home"
+      url = "/"
+      weight = 10
+    [[languages.en.menu.main]]
+      identifier = "archives"
+      name = "Archives"
+      url = "/archives/"
+      weight = 20
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      name = "Categories"
+      url = "/categories/"
+      weight = 30
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      name = "Tags"
+      url = "/tags/"
+      weight = 40
+    [[languages.en.menu.main]]
+      identifier = "about"
+      name = "About"
+      url = "/about/"
+      weight = 50
+
+  # 2. 简体中文 (Simplified Chinese)
+  [languages.zh-cn]
+    languageName = "简体中文"
+    weight = 20
+    title = "拾潮者之行"
+    [languages.zh-cn.params]
+      [languages.zh-cn.params.sidebar]
+        subtitle = "在潮起潮落间，打捞贝壳与星辰。"
+    [[languages.zh-cn.menu.main]]
+      identifier = "home"
+      name = "主页"
+      url = "/"
+      weight = 10
+    [[languages.zh-cn.menu.main]]
+      identifier = "archives"
+      name = "归档"
+      url = "/archives/"
+      weight = 20
+    [[languages.zh-cn.menu.main]]
+      identifier = "categories"
+      name = "分类"
+      url = "/categories/"
+      weight = 30
+    [[languages.zh-cn.menu.main]]
+      identifier = "tags"
+      name = "标签"
+      url = "/tags/"
+      weight = 40
+    [[languages.zh-cn.menu.main]]
+      identifier = "about"
+      name = "关于"
+      url = "/about/"
+      weight = 50
+
+  # 3. 西班牙语 (Spanish)
+  [languages.es]
+    languageName = "Español"
+    weight = 30
+    title = "El Errante Recolector de Mareas"
+    [languages.es.params]
+      [languages.es.params.sidebar]
+        subtitle = "Entre el flujo y reflujo, recojo conchas y estrellas."
+    [[languages.es.menu.main]]
+      name = "Inicio"
+      url = "/"
+      weight = 10
+    [[languages.es.menu.main]]
+      name = "Archivos"
+      url = "/archives/"
+      weight = 20
+    [[languages.es.menu.main]]
+      name = "Categorías"
+      url = "/categories/"
+      weight = 30
+    [[languages.es.menu.main]]
+      name = "Etiquetas"
+      url = "/tags/"
+      weight = 40
+    [[languages.es.menu.main]]
+      name = "Sobre mí"
+      url = "/about/"
+      weight = 50
+
+  # 4. 葡萄牙语 (Portuguese)
+  [languages.pt]
+    languageName = "Português"
+    weight = 40
+    title = "O Apanhador de Marés Errante"
+    [languages.pt.params]
+      [languages.pt.params.sidebar]
+        subtitle = "Na maré que vai e vem, recolho conchas e estrelas."
+    [[languages.pt.menu.main]]
+      name = "Início"
+      url = "/"
+      weight = 10
+    [[languages.pt.menu.main]]
+      name = "Arquivos"
+      url = "/archives/"
+      weight = 20
+    [[languages.pt.menu.main]]
+      name = "Categorias"
+      url = "/categories/"
+      weight = 30
+    [[languages.pt.menu.main]]
+      name = "Tags"
+      url = "/tags/"
+      weight = 40
+    [[languages.pt.menu.main]]
+      name = "Sobre"
+      url = "/about/"
+      weight = 50
+
+  # 5. 阿拉伯语 (Arabic)
+  [languages.ar]
+    languageName = "العربية"
+    weight = 50
+    title = "صائد المد والجزر التائه"
+    direction = "rtl" # 关键：指定为从右到左语言
+    [languages.ar.params]
+      [languages.ar.params.sidebar]
+        subtitle = "بين المد والجزر، أجمع الأصداف والنجوم."
+    [[languages.ar.menu.main]]
+      name = "الصفحة الرئيسية"
+      url = "/"
+      weight = 10
+    [[languages.ar.menu.main]]
+      name = "الأرشيف"
+      url = "/archives/"
+      weight = 20
+    [[languages.ar.menu.main]]
+      name = "الفئات"
+      url = "/categories/"
+      weight = 30
+    [[languages.ar.menu.main]]
+      name = "العلامات"
+      url = "/tags/"
+      weight = 40
+    [[languages.ar.menu.main]]
+      name = "حول"
+      url = "/about/"
+      weight = 50
+
+  # 6. 法语 (French)
+  [languages.fr]
+    languageName = "Français"
+    weight = 60
+    title = "Le Vadrouilleur des Marées"
+    [languages.fr.params]
+      [languages.fr.params.sidebar]
+        subtitle = "Au gré des marées, je ramasse coquillages et étoiles."
+    [[languages.fr.menu.main]]
+      name = "Accueil"
+      url = "/"
+      weight = 10
+    [[languages.fr.menu.main]]
+      name = "Archives"
+      url = "/archives/"
+      weight = 20
+    [[languages.fr.menu.main]]
+      name = "Catégories"
+      url = "/categories/"
+      weight = 30
+    [[languages.fr.menu.main]]
+      name = "Mots-clés"
+      url = "/tags/"
+      weight = 40
+    [[languages.fr.menu.main]]
+      name = "À propos"
+      url = "/about/"
+      weight = 50
+      
+  # 7. 俄语 (Russian)
+  [languages.ru]
+    languageName = "Русский"
+    weight = 70
+    title = "Странствующий Ловец Приливов"
+    [languages.ru.params]
+      [languages.ru.params.sidebar]
+        subtitle = "Среди приливов и отливов я собираю ракушки и звёзды."
+    [[languages.ru.menu.main]]
+      name = "Главная"
+      url = "/"
+      weight = 10
+    [[languages.ru.menu.main]]
+      name = "Архивы"
+      url = "/archives/"
+      weight = 20
+    [[languages.ru.menu.main]]
+      name = "Категории"
+      url = "/categories/"
+      weight = 30
+    [[languages.ru.menu.main]]
+      name = "Теги"
+      url = "/tags/"
+      weight = 40
+    [[languages.ru.menu.main]]
+      name = "Обо мне"
+      url = "/about/"
+      weight = 50
+
+  # 8. 德语 (German)
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 80
+    title = "Wandernder Gezeitensammler"
+    [languages.de.params]
+      [languages.de.params.sidebar]
+        subtitle = "In Ebbe und Flut sammle ich Muscheln und Sterne."
+    [[languages.de.menu.main]]
+      name = "Startseite"
+      url = "/"
+      weight = 10
+    [[languages.de.menu.main]]
+      name = "Archiv"
+      url = "/archives/"
+      weight = 20
+    [[languages.de.menu.main]]
+      name = "Kategorien"
+      url = "/categories/"
+      weight = 30
+    [[languages.de.menu.main]]
+      name = "Tags"
+      url = "/tags/"
+      weight = 40
+    [[languages.de.menu.main]]
+      name = "Über mich"
+      url = "/about/"
+      weight = 50
+      
+  # 9. 意大利语 (Italian)
+  [languages.it]
+    languageName = "Italiano"
+    weight = 90
+    title = "Il Raccoglitore Errante di Maree"
+    [languages.it.params]
+      [languages.it.params.sidebar]
+        subtitle = "Tra il flusso e il riflusso, raccolgo conchiglie e stelle."
+    [[languages.it.menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 10
+    [[languages.it.menu.main]]
+      name = "Archivio"
+      url = "/archives/"
+      weight = 20
+    [[languages.it.menu.main]]
+      name = "Categorie"
+      url = "/categories/"
+      weight = 30
+    [[languages.it.menu.main]]
+      name = "Tag"
+      url = "/tags/"
+      weight = 40
+    [[languages.it.menu.main]]
+      name = "Chi sono"
+      url = "/about/"
+      weight = 50
+
+  # 10. 印尼语 (Indonesian)
+  [languages.id]
+    languageName = "Indonesia"
+    weight = 100
+    title = "Sang Pengembara Penangkap Pasang"
+    [languages.id.params]
+      [languages.id.params.sidebar]
+        subtitle = "Di antara pasang surut, kukumpulkan kerang dan bintang."
+    [[languages.id.menu.main]]
+      name = "Beranda"
+      url = "/"
+      weight = 10
+    [[languages.id.menu.main]]
+      name = "Arsip"
+      url = "/archives/"
+      weight = 20
+    [[languages.id.menu.main]]
+      name = "Kategori"
+      url = "/categories/"
+      weight = 30
+    [[languages.id.menu.main]]
+      name = "Tag"
+      url = "/tags/"
+      weight = 40
+    [[languages.id.menu.main]]
+      name = "Tentang"
+      url = "/about/"
+      weight = 50
+
+  # 11. 越南语 (Vietnamese)
+  [languages.vi]
+    languageName = "Tiếng Việt"
+    weight = 110
+    title = "Kẻ Lãng Du Bắt Sóng Triều"
+    [languages.vi.params]
+      [languages.vi.params.sidebar]
+        subtitle = "Giữa thủy triều lên xuống, tôi nhặt vỏ sò và những vì sao."
+    [[languages.vi.menu.main]]
+      name = "Trang chủ"
+      url = "/"
+      weight = 10
+    [[languages.vi.menu.main]]
+      name = "Lưu trữ"
+      url = "/archives/"
+      weight = 20
+    [[languages.vi.menu.main]]
+      name = "Chuyên mục"
+      url = "/categories/"
+      weight = 30
+    [[languages.vi.menu.main]]
+      name = "Thẻ"
+      url = "/tags/"
+      weight = 40
+    [[languages.vi.menu.main]]
+      name = "Giới thiệu"
+      url = "/about/"
+      weight = 50
+      
+  # 12. 日语 (Japanese)
+  [languages.ja]
+    languageName = "日本語"
+    weight = 120
+    title = "さまよう潮拾い"
+    [languages.ja.params]
+      [languages.ja.params.sidebar]
+        subtitle = "潮の満ち引きの中、貝殻と星を拾う。"
+    [[languages.ja.menu.main]]
+      name = "ホーム"
+      url = "/"
+      weight = 10
+    [[languages.ja.menu.main]]
+      name = "アーカイブ"
+      url = "/archives/"
+      weight = 20
+    [[languages.ja.menu.main]]
+      name = "カテゴリー"
+      url = "/categories/"
+      weight = 30
+    [[languages.ja.menu.main]]
+      name = "タグ"
+      url = "/tags/"
+      weight = 40
+    [[languages.ja.menu.main]]
+      name = "概要"
+      url = "/about/"
+      weight = 50
+
+  # 13. 韩语 (Korean)
+  [languages.ko]
+    languageName = "한국어"
+    weight = 130
+    title = "방랑하는 파도잡이"
+    [languages.ko.params]
+      [languages.ko.params.sidebar]
+        subtitle = "밀물과 썰물 사이에서, 조개와 별을 줍습니다."
+    [[languages.ko.menu.main]]
+      name = "홈"
+      url = "/"
+      weight = 10
+    [[languages.ko.menu.main]]
+      name = "아카이브"
+      url = "/archives/"
+      weight = 20
+    [[languages.ko.menu.main]]
+      name = "카테고리"
+      url = "/categories/"
+      weight = 30
+    [[languages.ko.menu.main]]
+      name = "태그"
+      url = "/tags/"
+      weight = 40
+    [[languages.ko.menu.main]]
+      name = "소개"
+      url = "/about/"
+      weight = 50
+
+  # 14. 印地语
+  [languages.hi]
+    languageName = "हिन्दी"
+    weight = 140
+    title = "भटकता ज्वार संग्राहक"
+    [languages.hi.params]
+      subtitle = "उतार-चढ़ाव के बीच, मैं सीपियाँ और तारे बटोरता हूँ।"
+    [[languages.hi.menu.main]]
+      name = "घर"
+      url = "/"
+      weight = 10
+    [[languages.hi.menu.main]]
+      name = "पुरालेख"
+      url = "/archives/"
+      weight = 20
+    [[languages.hi.menu.main]]
+      name = "श्रेणियाँ"
+      url = "/categories/"
+      weight = 30
+    [[languages.hi.menu.main]]
+      name = "टैग"
+      url = "/tags/"
+      weight = 40
+    [[languages.hi.menu.main]]
+      name = "परिचय"
+      url = "/about/"
+      weight = 50
+
+# 15. 乌尔都语 (RTL)
+  [languages.ur]
+    languageName = "اردو"
+    weight = 150
+    title = "بھٹکتا ہوا مدوجزر کا شکاری"
+    direction = "rtl" # 关键：指定为从右到左语言
+    [languages.ur.params]
+      subtitle = "لہروں کے اتار چڑھاؤ کے بیچ، میں سیپیاں اور ستارے چنتا ہوں۔"
+    [[languages.ur.menu.main]]
+      name = "سرورق"
+      url = "/"
+      weight = 10
+    [[languages.ur.menu.main]]
+      name = "آرکائیو"
+      url = "/archives/"
+      weight = 20
+    [[languages.ur.menu.main]]
+      name = "زمرہ جات"
+      url = "/categories/"
+      weight = 30
+    [[languages.ur.menu.main]]
+      name = "ٹیگز"
+      url = "/tags/"
+      weight = 40
+    [[languages.ur.menu.main]]
+      name = "تعارف"
+      url = "/about/"
+      weight = 50
+
+# 16. 孟加拉语
+  [languages.bn]
+    languageName = "বাংলা"
+    weight = 160
+    title = "ভবঘুরে জোয়ার সংগ্রাহক"
+    [languages.bn.params]
+      subtitle = "প্রবাহের উত্থান-পতনের মাঝে, আমি ঝিনুক ও তারা সংগ্রহ করি।"
+    [[languages.bn.menu.main]]
+      name = "হোম"
+      url = "/"
+      weight = 10
+    [[languages.bn.menu.main]]
+      name = "আর্কাইভ"
+      url = "/archives/"
+      weight = 20
+    [[languages.bn.menu.main]]
+      name = "বিভাগ"
+      url = "/categories/"
+      weight = 30
+    [[languages.bn.menu.main]]
+      name = "ট্যাগ"
+      url = "/tags/"
+      weight = 40
+    [[languages.bn.menu.main]]
+      name = "পরিচিতি"
+      url = "/about/"
+      weight = 50
+
+# 17. 泰语
+  [languages.th]
+    languageName = "ไทย"
+    weight = 170
+    title = "นักจับกระแสคลื่นผู้พเนจร"
+    [languages.th.params]
+      subtitle = "ท่ามกลางกระแสคลื่นที่ผันผวน ฉันเก็บเปลือกหอยและดวงดาว"
+    [[languages.th.menu.main]]
+      name = "หน้าแรก"
+      url = "/"
+      weight = 10
+    [[languages.th.menu.main]]
+      name = "คลังบทความ"
+      url = "/archives/"
+      weight = 20
+    [[languages.th.menu.main]]
+      name = "หมวดหมู่"
+      url = "/categories/"
+      weight = 30
+    [[languages.th.menu.main]]
+      name = "แท็ก"
+      url = "/tags/"
+      weight = 40
+    [[languages.th.menu.main]]
+      name = "เกี่ยวกับ"
+      url = "/about/"
+      weight = 50
+      
+
+# --- 全局参数 (所有语言共享的设置) ---
+[params]
+    mainSections = ["posts", "notes", "docs"]
+    featuredImageField = "image"
+    rssFullContent = true
+    favicon = "" # favicon图标路径, e.g., "/favicon.ico"
+
+    [params.performance]
+        # 告知 Stack 主题开启其内置的图片处理功能。
+        # 这对于文章内容之外的图片（如列表页缩略图、特色图片）依然有用。
+        imageProcessing = true
+
+    # --- 页脚配置 ---
+    [params.footer]
+        since = 2024
+        powered = true
+
+    # --- 日期格式 ---
+    [params.dateFormat]
+        published = "Jan 02, 2006"
+        lastUpdated = "Jan 02, 2006 15:04 MST"
+
+    # --- 左侧边栏配置 ---
+    [params.sidebar]
+        emoji = "🌊"
+        [params.sidebar.avatar]
+            enabled = true
+            local = true
+            src = "images/avatar.jpg"
+
+    # --- 文章页面配置 ---
+    [params.article]
+        math = false
+        toc = true
+        readingTime = true
+
+    # --- 右侧小部件配置 ---
+    [params.widgets]
+        [[params.widgets.homepage]]
+            type = "search"
+        [[params.widgets.homepage]]
+            type = "archives"
+            [params.widgets.homepage.params]
+                limit = 5
+        [[params.widgets.homepage]]
+            type = "categories"
+            [params.widgets.homepage.params]
+                limit = 10
+        [[params.widgets.homepage]]
+            type = "tag-cloud"
+            [params.widgets.homepage.params]
+                limit = 10
+        [[params.widgets.page]]
+            type = "toc"

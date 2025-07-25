@@ -1,0 +1,38 @@
+{{- /*
+  图片渲染钩子 (Render Hook)
+  功能:
+  1. 自动将页面绑定的图片资源转换为 WebP 格式。
+  2. 提供原始格式 (JPG/PNG) 作为兼容性回退。
+  3. 自动添加 `loading="lazy"` 实现图片懒加载。
+  4. 自动添加图片的宽度和高度属性，防止页面布局抖动。
+  5. 兼容处理外部图片或 /static 目录下的图片。
+*/ -}}
+
+{{- $src := .Destination -}}
+{{- $alt := .Text -}}
+{{- $title := .Title -}}
+
+{{- if or (strings.HasPrefix $src "http://") (strings.HasPrefix $src "https://") -}}
+  {{- /* 外部图片：只添加懒加载和 alt/title */ -}}
+  <img src="{{ $src }}" alt="{{ $alt }}" title="{{ $title }}" loading="lazy">
+{{- else -}}
+  {{- $image := .Page.Resources.GetMatch $src -}}
+  {{- if $image -}}
+    {{- /* 页面绑定的图片资源 (Page Bundle Resource) */ -}}
+    {{- $resized_webp := $image.Resize "800x webp" -}}
+    {{- $resized_fallback := $image.Resize "800x" -}}
+    <picture>
+      <source srcset="{{ $resized_webp.RelPermalink }}" type="image/webp">
+      <source srcset="{{ $resized_fallback.RelPermalink }}" type="{{ $resized_fallback.MediaType.Type }}">
+      <img src="{{ $resized_fallback.RelPermalink }}"
+           width="{{ $resized_fallback.Width }}"
+           height="{{ $resized_fallback.Height }}"
+           alt="{{ $alt }}"
+           title="{{ $title }}"
+           loading="lazy">
+    </picture>
+  {{- else -}}
+    {{- /* /static 目录下的图片：只添加懒加载和 alt/title */ -}}
+    <img src="{{ $src | relURL }}" alt="{{ $alt }}" title="{{ $title }}" loading="lazy">
+  {{- end -}}
+{{- end -}}
