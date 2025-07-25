@@ -8,6 +8,7 @@
 baseURL = "https://gnailcn.github.io/"
 theme = "stack"
 defaultContentLanguage = "en" # 网站默认语言是英语
+defaultContentLanguageInSubdir = true # 确保默认语言也使用语言前缀
 
 # --- 分页配置 ---
 [pagination]
